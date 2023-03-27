@@ -1,0 +1,6 @@
+module Pods_ChatAiDemo {
+  umbrella header "Pods-ChatAiDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
