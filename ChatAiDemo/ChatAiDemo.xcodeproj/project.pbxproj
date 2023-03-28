@@ -14,6 +14,7 @@
 		1E0F464429C7411F008E88E8 /* ChatAiDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0F464329C7411F008E88E8 /* ChatAiDemoTests.swift */; };
 		1E0F464E29C7411F008E88E8 /* ChatAiDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0F464D29C7411F008E88E8 /* ChatAiDemoUITests.swift */; };
 		1E0F465029C7411F008E88E8 /* ChatAiDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0F464F29C7411F008E88E8 /* ChatAiDemoUITestsLaunchTests.swift */; };
+		1E4F831B29D3208C00D7C713 /* CAPopoupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4F831A29D3208C00D7C713 /* CAPopoupView.swift */; };
 		1E83D2B529D1361700167150 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E83D2B429D1361700167150 /* Config.swift */; };
 		1E83D2B829D1385C00167150 /* DefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E83D2B729D1385C00167150 /* DefaultService.swift */; };
 		1E83D2BA29D138E600167150 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E83D2B929D138E600167150 /* User.swift */; };
@@ -52,6 +53,7 @@
 		1E0F464929C7411F008E88E8 /* ChatAiDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatAiDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E0F464D29C7411F008E88E8 /* ChatAiDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAiDemoUITests.swift; sourceTree = "<group>"; };
 		1E0F464F29C7411F008E88E8 /* ChatAiDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAiDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1E4F831A29D3208C00D7C713 /* CAPopoupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAPopoupView.swift; sourceTree = "<group>"; };
 		1E83D2B429D1361700167150 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		1E83D2B729D1385C00167150 /* DefaultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultService.swift; sourceTree = "<group>"; };
 		1E83D2B929D138E600167150 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				1E0F463A29C7411F008E88E8 /* Info.plist */,
 				1E83D2B429D1361700167150 /* Config.swift */,
 				1E83D2B929D138E600167150 /* User.swift */,
+				1E4F831A29D3208C00D7C713 /* CAPopoupView.swift */,
 			);
 			path = ChatAiDemo;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E4F831B29D3208C00D7C713 /* CAPopoupView.swift in Sources */,
 				1E0F463129C7411E008E88E8 /* ViewController.swift in Sources */,
 				1E83D2BC29D13B4400167150 /* ParamUtil.swift in Sources */,
 				1E83D2B529D1361700167150 /* Config.swift in Sources */,

@@ -49,6 +49,12 @@ class ViewController: UIViewController {
                 print("request result\n stateCode:\(Error)")
             }
         }
+        
+        CAPopoupView.showView(name: "我是张三", age: "18岁了", time: "就在今年") { text in
+                    print("收到了东西 \(text)")
+                } clickClose: {
+                    print("点击关闭")
+                }
     }
 
 }
