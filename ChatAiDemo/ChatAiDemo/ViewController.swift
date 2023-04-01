@@ -57,6 +57,18 @@ class ViewController: UIViewController {
         let resultArr1 = tempArr.filter { $0?.count ?? 0 > 0 }
         let resultArr2 = tempArr.filter { !($0?.isEmpty ?? true) }
         print("2")
+        
+        var dasdkArr: [Any] = []
+        for (index, element) in arr.enumerated() {
+            if (index > 0) {
+                let lastElement = arr[index - 1]
+                if (lastElement.send_id == "1" && element.repley_id == "1") {
+                    dasdkArr.append([lastElement, element])
+                }
+            }
+            print(index,element)
+        }
+        print("3")
     }
     
     func compareModel(_ a:CAChatModel, _ b: CAChatModel) -> Array<Any>? {
@@ -81,11 +93,14 @@ class ViewController: UIViewController {
             }
         }
         
-        CAPopoupView.showView(name: "我是张三", age: "18岁了", time: "就在今年") { text in
-            print("收到了东西 \(text)")
-        } clickClose: {
-            print("点击关闭")
-        }
+//        CAPopoupView.showView(name: "我是张三", age: "18岁了", time: "就在今年") { text in
+//            print("收到了东西 \(text)")
+//        } clickClose: {
+//            print("点击关闭")
+//        }
+        
+        let alertController = UIAlertController(title: "我是警告框弹窗", message: "", preferredStyle: .actionSheet)
+        
     }
     
 }
