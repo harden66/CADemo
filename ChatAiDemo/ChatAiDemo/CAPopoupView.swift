@@ -139,9 +139,14 @@ class CAPopoupView: UIView {
                 subscribePopView.alpha = 1
             } completion: { _ in
                 UIView.animate(withDuration: 0.1, animations: {
-                    subscribePopView.backView.snp.updateConstraints { make in
-                        // for layout animation in view presenting from bottom, content height depend on subviews
-                        make.top.equalTo(subscribePopView.snp.bottom).offset(-subscribePopView.backView.frame.height)
+//                    subscribePopView.backView.snp.updateConstraints { make in
+//                        // for layout animation in view presenting from bottom, content height depend on subviews
+//                        make.top.equalTo(subscribePopView.snp.bottom).offset(-subscribePopView.backView.frame.height)
+//                    }
+                    subscribePopView.backView.snp.remakeConstraints { make in
+                        make.centerY.equalToSuperview()
+                        make.leading.trailing.equalToSuperview()
+                        make.height.equalTo(300)
                     }
                     subscribePopView.layoutIfNeeded()
                 }, completion: nil)
@@ -166,8 +171,9 @@ class CAPopoupView: UIView {
             }
             backView.snp.makeConstraints { make in
                 // for layout animation in view presenting from bottom, content height depend on subviews
-                make.top.equalTo(self.snp.bottom).offset(0)
+                make.center.equalTo(self).offset(0)
                 make.left.right.equalToSuperview()
+                
             }
             
             var safeBottomHeight: CGFloat = 0

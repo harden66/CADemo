@@ -69,7 +69,24 @@ class ViewController: UIViewController {
             print(index,element)
         }
         print("3")
+        
+        
+        
+        
+        
+        
+        self.view.addSubview(self.label1)
+        self.label1.frame = CGRect(x: 100, y: 150, width: 200, height: 50)
+        
+        
+        
+        
+        
     }
+    
+    
+    lazy var label1: UILabel = UILabel.creatLabel("ddddd")
+    
     
     func compareModel(_ a:CAChatModel, _ b: CAChatModel) -> Array<Any>? {
         if (((a.id ?? 0) + 1 == b.id) && a.send_id == "1" && b.repley_id == "1") {
@@ -93,14 +110,27 @@ class ViewController: UIViewController {
             }
         }
         
-//        CAPopoupView.showView(name: "我是张三", age: "18岁了", time: "就在今年") { text in
-//            print("收到了东西 \(text)")
-//        } clickClose: {
-//            print("点击关闭")
-//        }
+        /*
+         <Parameters: Encodable>(_ convertible: URLConvertible,
+                                                  method: HTTPMethod = .get,
+                                                  parameters: Parameters? = nil,
+                                                  encoder: ParameterEncoder = URLEncodedFormParameterEncoder.default,
+                                                  headers: HTTPHeaders? = nil,
+                                                  interceptor: RequestInterceptor? = nil,
+                                                  requestModifier: RequestModifier? = nil)
+         */
         
-        let alertController = UIAlertController(title: "我是警告框弹窗", message: "", preferredStyle: .actionSheet)
         
+        
+        CAPopuopCustomView.showView(name: "我是张三", age: "18岁了", time: "就在今年") { text in
+            print("收到了东西 \(text)")
+        } clickClose: {
+            print("点击关闭")
+        }
+        
+//        let alertController = UIAlertController(title: "我是警告框弹窗", message: "", preferredStyle: .actionSheet)
+        
+//        self.navigationController?.pushViewController(guideController(), animated: true)
     }
     
 }
