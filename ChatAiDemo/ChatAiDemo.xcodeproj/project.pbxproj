@@ -20,6 +20,10 @@
 		1E316FC529D9677C00E1994F /* guideTwoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E316FC429D9677C00E1994F /* guideTwoController.swift */; };
 		1E316FC729D96EA800E1994F /* CAPopuopCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E316FC629D96EA800E1994F /* CAPopuopCustomView.swift */; };
 		1E4F831B29D3208C00D7C713 /* CAPopoupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4F831A29D3208C00D7C713 /* CAPopoupView.swift */; };
+		1E60CCFF29DF326600DC0E6F /* CALabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E60CCFE29DF326600DC0E6F /* CALabel.swift */; };
+		1E60CD0129DF332A00DC0E6F /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E60CD0029DF332A00DC0E6F /* NSAttributedString+Extension.swift */; };
+		1E60CD0329DF337700DC0E6F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E60CD0229DF337600DC0E6F /* UIColor+Extension.swift */; };
+		1E60CD0529DF395F00DC0E6F /* NSMutableAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E60CD0429DF395F00DC0E6F /* NSMutableAttributedString+Extension.swift */; };
 		1E83D2B529D1361700167150 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E83D2B429D1361700167150 /* Config.swift */; };
 		1E83D2B829D1385C00167150 /* DefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E83D2B729D1385C00167150 /* DefaultService.swift */; };
 		1E83D2BA29D138E600167150 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E83D2B929D138E600167150 /* User.swift */; };
@@ -64,6 +68,10 @@
 		1E316FC429D9677C00E1994F /* guideTwoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guideTwoController.swift; sourceTree = "<group>"; };
 		1E316FC629D96EA800E1994F /* CAPopuopCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAPopuopCustomView.swift; sourceTree = "<group>"; };
 		1E4F831A29D3208C00D7C713 /* CAPopoupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAPopoupView.swift; sourceTree = "<group>"; };
+		1E60CCFE29DF326600DC0E6F /* CALabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALabel.swift; sourceTree = "<group>"; };
+		1E60CD0029DF332A00DC0E6F /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		1E60CD0229DF337600DC0E6F /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		1E60CD0429DF395F00DC0E6F /* NSMutableAttributedString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extension.swift"; sourceTree = "<group>"; };
 		1E83D2B429D1361700167150 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		1E83D2B729D1385C00167150 /* DefaultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultService.swift; sourceTree = "<group>"; };
 		1E83D2B929D138E600167150 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -138,9 +146,13 @@
 				1E4F831A29D3208C00D7C713 /* CAPopoupView.swift */,
 				1E316FBE29D721D800E1994F /* CAChatModel.swift */,
 				1E316FC029D7EF5900E1994F /* UILabel+Extension.swift */,
+				1E60CD0229DF337600DC0E6F /* UIColor+Extension.swift */,
+				1E60CD0429DF395F00DC0E6F /* NSMutableAttributedString+Extension.swift */,
+				1E60CD0029DF332A00DC0E6F /* NSAttributedString+Extension.swift */,
 				1E316FC229D95C3400E1994F /* guideController.swift */,
 				1E316FC429D9677C00E1994F /* guideTwoController.swift */,
 				1E316FC629D96EA800E1994F /* CAPopuopCustomView.swift */,
+				1E60CCFE29DF326600DC0E6F /* CALabel.swift */,
 			);
 			path = ChatAiDemo;
 			sourceTree = "<group>";
@@ -355,12 +367,16 @@
 			files = (
 				1E316FC729D96EA800E1994F /* CAPopuopCustomView.swift in Sources */,
 				1E316FC129D7EF5900E1994F /* UILabel+Extension.swift in Sources */,
+				1E60CCFF29DF326600DC0E6F /* CALabel.swift in Sources */,
 				1E4F831B29D3208C00D7C713 /* CAPopoupView.swift in Sources */,
+				1E60CD0329DF337700DC0E6F /* UIColor+Extension.swift in Sources */,
 				1E316FBF29D721D800E1994F /* CAChatModel.swift in Sources */,
 				1E0F463129C7411E008E88E8 /* ViewController.swift in Sources */,
 				1E83D2BC29D13B4400167150 /* ParamUtil.swift in Sources */,
+				1E60CD0529DF395F00DC0E6F /* NSMutableAttributedString+Extension.swift in Sources */,
 				1E316FC529D9677C00E1994F /* guideTwoController.swift in Sources */,
 				1E83D2B529D1361700167150 /* Config.swift in Sources */,
+				1E60CD0129DF332A00DC0E6F /* NSAttributedString+Extension.swift in Sources */,
 				1EF7CFCE29D1DD9A0082F8AC /* RequestTool.swift in Sources */,
 				1E83D2BA29D138E600167150 /* User.swift in Sources */,
 				1E83D2B829D1385C00167150 /* DefaultService.swift in Sources */,
