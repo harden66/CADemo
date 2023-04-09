@@ -15,11 +15,11 @@ class CATabbarController: UITabBarController {
     }
     
     func initTabbar() {
-        let chatNav = UINavigationController(rootViewController: ViewController())
+        let chatNav = UINavigationController(rootViewController: CAHomeController())
         chatNav.tabBarItem.title = "聊天"
         chatNav.tabBarItem.image = UIImage(named: "icon_tabbar_chat_normal")
         
-        let creationNav = UINavigationController(rootViewController: ViewController())
+        let creationNav = UINavigationController(rootViewController: CACreationController())
         creationNav.tabBarItem.title = "创作"
         creationNav.tabBarItem.image = UIImage(named: "icon_tabbar_creation_normal")
         

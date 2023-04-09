@@ -1,5 +1,5 @@
 //
-//  CALabel.swift
+//  CATruncationLabel.swift.swift
 //  CLDemo-Swift
 //
 //  Created by Chen JmoVxia on 2022/7/15.
@@ -10,7 +10,7 @@ import SnapKit
 
 
 //MARK: - JmoVxia---类-属性
-class CALabel: UIControl {
+class CATruncationLabel: UIControl {
     override init(frame: CGRect) {
         super.init(frame: frame)
         initSubViews()
@@ -61,7 +61,7 @@ class CALabel: UIControl {
     }
 }
 //MARK: - JmoVxia---布局
-private extension CALabel {
+private extension CATruncationLabel {
     func initSubViews() {
         addSubview(mainStackView)
         mainStackView.addArrangedSubview(textLabel)
@@ -73,21 +73,27 @@ private extension CALabel {
     }
 }
 //MARK: - JmoVxia---公共方法
-extension CALabel {
-    func reload() {
+extension CATruncationLabel {
+    func reload(_ width: CGFloat) {
         guard let attributedText = attributedText?.addAttributes({ $0.font(textLabel.font) }) else { return }
-        guard Thread.isMainThread else { return DispatchQueue.main.async { self.reload() } }
+        guard Thread.isMainThread else { return DispatchQueue.main.async { self.reload(width) } }
         setNeedsLayout()
         layoutIfNeeded()
-        let width = textLabel.bounds.width
-        let lines = attributedText.lines(width)
+        var labelWidth: CGFloat = 0
+        if width > 0 {
+            labelWidth = width
+        }else {
+            labelWidth = textLabel.bounds.width
+        }
+        print("获取textLabel的宽度：\(labelWidth)")
+        let lines = attributedText.lines(labelWidth)
         if numberOfLines > 0,
            lines.count >= numberOfLines {
             let additionalAttributedText = isOpen ? truncationToken.close : truncationToken.open
             let length = lines.prefix(numberOfLines).reduce(0, { $0 + CTLineGetStringRange($1).length })
             textLabel.attributedText = additionalAttributedText
             let truncationTokenWidth = textLabel.sizeThatFits(.zero).width
-            let maxLength = isOpen ? attributedText.length : min(CTLineGetStringIndexForPosition(lines[numberOfLines - 1], CGPoint(x: width - truncationTokenWidth, y: 0)), length) - 1
+            let maxLength = isOpen ? attributedText.length : min(CTLineGetStringIndexForPosition(lines[numberOfLines - 1], CGPoint(x: labelWidth - truncationTokenWidth, y: 0)), length) - 1
             displayAttributedText = {
                let attributedText = NSMutableAttributedString(attributedString: attributedText.attributedSubstring(from: NSRange(location: 0, length: maxLength)))
                 attributedText.append(additionalAttributedText)
