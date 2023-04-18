@@ -40,7 +40,7 @@ class CACreationController: CABaseViewController {
         let rect = textVIEW.caretRect(for: textVIEW.selectedTextRange!.end)
         let eeee = UIView(frame: CGRect(x: rect.origin.x + 2, y: rect.origin.y, width: rect.size.width, height: rect.size.height))
         eeee.backgroundColor = UIColor.red
-        self.setlights(view: eeee)
+//        self.setlights(view: eeee)
         textVIEW.addSubview(eeee)
         self.textView = textVIEW
         self.eeeee = eeee
@@ -67,6 +67,7 @@ class CACreationController: CABaseViewController {
         self.textView.text = "我是垃圾对方拉设计费大厦撒来得及福利卡试卷得分阿萨德路附近"
         let rect = self.textView.caretRect(for: self.textView.selectedTextRange!.end)
         self.eeeee.frame = CGRect(x: rect.origin.x + 2, y: rect.origin.y, width: rect.size.width, height: rect.size.height)
+        self.eeeee.addFlicker()
         return
         
         
