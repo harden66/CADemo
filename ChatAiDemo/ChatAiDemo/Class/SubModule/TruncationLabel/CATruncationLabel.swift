@@ -10,6 +10,7 @@ import SnapKit
 
 
 //MARK: - JmoVxia---类-属性
+/// 控件自带判断属性关联UI的不适合在cell中使用
 class CATruncationLabel: UIControl {
     override init(frame: CGRect) {
         super.init(frame: frame)
