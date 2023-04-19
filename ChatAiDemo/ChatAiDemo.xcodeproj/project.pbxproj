@@ -34,6 +34,7 @@
 		1E9291A229CB42C60091E0F9 /* CATabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9291A129CB42C60091E0F9 /* CATabbarController.swift */; };
 		1EF7CFCE29D1DD9A0082F8AC /* RequestTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7CFCD29D1DD9A0082F8AC /* RequestTool.swift */; };
 		1EFC87CC29EEF10F004BD4E8 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC87CB29EEF10F004BD4E8 /* UIView+Extension.swift */; };
+		1EFC87CF29F04E53004BD4E8 /* JCArrayOperationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC87CE29F04E53004BD4E8 /* JCArrayOperationController.swift */; };
 		DBDC226591A9D9A98C8AB3B9 /* libPods-ChatAiDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 767F81949C48AA13807579D1 /* libPods-ChatAiDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,7 @@
 		1E9291A129CB42C60091E0F9 /* CATabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATabbarController.swift; sourceTree = "<group>"; };
 		1EF7CFCD29D1DD9A0082F8AC /* RequestTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTool.swift; sourceTree = "<group>"; };
 		1EFC87CB29EEF10F004BD4E8 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		1EFC87CE29F04E53004BD4E8 /* JCArrayOperationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCArrayOperationController.swift; sourceTree = "<group>"; };
 		314AF79C73FADFDEDA25001B /* Pods-ChatAiDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatAiDemo.release.xcconfig"; path = "Target Support Files/Pods-ChatAiDemo/Pods-ChatAiDemo.release.xcconfig"; sourceTree = "<group>"; };
 		4981ABED1A46D2590D8F233D /* Pods-ChatAiDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatAiDemo.debug.xcconfig"; path = "Target Support Files/Pods-ChatAiDemo/Pods-ChatAiDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		767F81949C48AA13807579D1 /* libPods-ChatAiDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChatAiDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,7 +204,6 @@
 			isa = PBXGroup;
 			children = (
 				1E0F463029C7411E008E88E8 /* CAHomeController.swift */,
-				1E316FBE29D721D800E1994F /* CAChatModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -259,6 +260,7 @@
 		1E58440629E85B5F004BA104 /* SubModule */ = {
 			isa = PBXGroup;
 			children = (
+				1EFC87CD29F04E33004BD4E8 /* ObjectArray */,
 				1E58440729E85B72004BA104 /* TruncationLabel */,
 			);
 			path = SubModule;
@@ -290,6 +292,15 @@
 				1E9291A129CB42C60091E0F9 /* CATabbarController.swift */,
 			);
 			path = NavAndTabbar;
+			sourceTree = "<group>";
+		};
+		1EFC87CD29F04E33004BD4E8 /* ObjectArray */ = {
+			isa = PBXGroup;
+			children = (
+				1EFC87CE29F04E53004BD4E8 /* JCArrayOperationController.swift */,
+				1E316FBE29D721D800E1994F /* CAChatModel.swift */,
+			);
+			path = ObjectArray;
 			sourceTree = "<group>";
 		};
 		6E66D14C7C9FEA433CD8E63F /* Frameworks */ = {
@@ -374,6 +385,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				CLASSPREFIX = JC;
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
@@ -496,6 +508,7 @@
 				1E60CD0529DF395F00DC0E6F /* NSMutableAttributedString+Extension.swift in Sources */,
 				1E316FC529D9677C00E1994F /* guideTwoController.swift in Sources */,
 				1E83D2B529D1361700167150 /* Config.swift in Sources */,
+				1EFC87CF29F04E53004BD4E8 /* JCArrayOperationController.swift in Sources */,
 				1E58440229E3113C004BA104 /* CABaseViewController.swift in Sources */,
 				1E60CD0129DF332A00DC0E6F /* NSAttributedString+Extension.swift in Sources */,
 				1EF7CFCE29D1DD9A0082F8AC /* RequestTool.swift in Sources */,

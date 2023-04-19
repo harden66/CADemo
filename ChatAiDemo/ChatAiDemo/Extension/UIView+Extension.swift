@@ -18,7 +18,7 @@ extension UIView {
         anim.repeatCount = MAXFLOAT
         anim.isRemovedOnCompletion = false
         anim.fillMode = .forwards
-        anim.timingFunction = CAMediaTimingFunction.init(name: .easeIn) //没有的话是均匀的动画
+//        anim.timingFunction = CAMediaTimingFunction.init(name: .easeIn) //没有的话是均匀的动画
         self.layer.add(anim, forKey: nil)
     }
     

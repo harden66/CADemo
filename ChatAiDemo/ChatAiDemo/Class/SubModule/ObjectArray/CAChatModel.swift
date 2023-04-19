@@ -8,10 +8,10 @@
 import Foundation
 
 class CAChatModel: NSObject {
-     
-    var send_id: String?
-    var repley_id: String?
-    var id: Int?
+    
+    @objc var send_id: String?
+    @objc var repley_id: String?
+    @objc var id: Int = 0
     
     class func createModel(_ sendId: String, _ repleyId: String, _ id: Int) -> CAChatModel {
         let model = CAChatModel()
@@ -19,5 +19,10 @@ class CAChatModel: NSObject {
         model.repley_id = repleyId
         model.id = id
         return model
+    }
+    
+    override var description: String {
+        let properties = ["id", "send_id", "repley_id"]
+        return "\(dictionaryWithValues(forKeys: properties))"
     }
 }

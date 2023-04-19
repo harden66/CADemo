@@ -26,7 +26,8 @@ class CAHomeController: CABaseViewController, UITableViewDelegate, UITableViewDa
         self.view.backgroundColor = .white
         self.navigationItem.title = "Home"
         
-        dataSource = [["JCTruncationLabelController": "TableView中cell加载展开收起的Label"]]
+        dataSource = [["JCTruncationLabelController": "TableView中cell加载展开收起的Label"],
+                      ["JCArrayOperationController": "对象数组操作"]]
         
         view.addSubview(tableView)
         tableView.snp.makeConstraints { make in

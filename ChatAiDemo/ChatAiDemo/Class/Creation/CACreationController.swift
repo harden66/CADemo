@@ -36,6 +36,7 @@ class CACreationController: CABaseViewController {
         let textVIEW = UITextView(frame: CGRect(x: 20, y: 200, width: 300, height: 300))
         textVIEW.layer.borderColor = UIColor.red.cgColor
         textVIEW.layer.borderWidth = 1
+        textVIEW.isEditable = false
         textVIEW.text = ""
         let rect = textVIEW.caretRect(for: textVIEW.selectedTextRange!.end)
         let eeee = UIView(frame: CGRect(x: rect.origin.x + 2, y: rect.origin.y, width: rect.size.width, height: rect.size.height))
