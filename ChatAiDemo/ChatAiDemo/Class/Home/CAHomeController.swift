@@ -11,6 +11,8 @@ import Moya
 
 class CAHomeController: CABaseViewController, UITableViewDelegate, UITableViewDataSource {
     var dataSource: [[String: String]] = []
+    var signle: Bool = true
+    var semaphore = DispatchSemaphore.init(value: 0)
     
     fileprivate lazy var tableView: UITableView = {
         let tableView = UITableView(frame: CGRectZero, style: .plain)
@@ -20,6 +22,12 @@ class CAHomeController: CABaseViewController, UITableViewDelegate, UITableViewDa
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "CAHomeCell")
         return tableView
     }()
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("dddd")
+        self.signle = false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +41,42 @@ class CAHomeController: CABaseViewController, UITableViewDelegate, UITableViewDa
         tableView.snp.makeConstraints { make in
             make.top.leading.bottom.trailing.equalToSuperview()
         }
+        
+        
+        
+        
+        
+        let queue = DispatchQueue(label: "com.chaoone.td", qos: .utility, attributes: .concurrent)
+        queue.async {
+            while (self.signle) {
+                print("dddddddd \(Thread.current)")
+                DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
+                    
+                    let provider = MoyaProvider<DefaultService>()
+                    provider.request(.sheets(size: 10)) { result in
+                        print(result)
+                        self.semaphore.signal()
+                        switch result {
+                        case let .success(Response):
+                            let data = Response.data
+                            let code = Response.statusCode
+                            let dataString = String(data: data, encoding: .utf8)
+                            print("request result\n stateCode:\(code),\n data:\(String(describing: dataString))")
+                        case let .failure(Error):
+                            print("request result\n stateCode:\(Error)")
+                        }
+                        print("dduu \(Thread.current)")
+                        self.tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .none)
+                    }
+                }
+                self.semaphore.wait()
+
+            }
+        }
+        
+        
+        
+        
     }
     
     // MARK: TableView的代理
@@ -52,6 +96,7 @@ class CAHomeController: CABaseViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.signle = false
         let controller = classFromStr(dataSource[indexPath.row].keys.first ?? "")
         self.navigationController?.pushViewController(controller, animated: true)
     }
