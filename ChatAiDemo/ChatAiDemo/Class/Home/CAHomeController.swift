@@ -26,7 +26,6 @@ class CAHomeController: CABaseViewController, UITableViewDelegate, UITableViewDa
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         print("dddd")
-        self.signle = false
     }
     
     override func viewDidLoad() {
@@ -66,7 +65,10 @@ class CAHomeController: CABaseViewController, UITableViewDelegate, UITableViewDa
                             print("request result\n stateCode:\(Error)")
                         }
                         print("dduu \(Thread.current)")
-                        self.tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .none)
+                        if (self.signle) {
+                            
+                            self.tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .none)
+                        }
                     }
                 }
                 self.semaphore.wait()
