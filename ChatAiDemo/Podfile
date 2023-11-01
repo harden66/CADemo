@@ -15,4 +15,5 @@ target 'ChatAiDemo' do
   # 下拉刷新
   # pod 'MZRefresh', '~> 0.0.6'
   pod 'ZLPhotoBrowser'
+  pod 'MWPhotoBrowserSwift'
 end

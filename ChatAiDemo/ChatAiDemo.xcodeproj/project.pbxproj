@@ -31,6 +31,7 @@
 		1E83D2B829D1385C00167150 /* DefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E83D2B729D1385C00167150 /* DefaultService.swift */; };
 		1E83D2BA29D138E600167150 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E83D2B929D138E600167150 /* User.swift */; };
 		1E83D2BC29D13B4400167150 /* ParamUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E83D2BB29D13B4400167150 /* ParamUtil.swift */; };
+		1E86A9EE29F57FFF007FB9F7 /* CASelectPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E86A9ED29F57FFF007FB9F7 /* CASelectPhotoController.swift */; };
 		1E9291A229CB42C60091E0F9 /* CATabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9291A129CB42C60091E0F9 /* CATabbarController.swift */; };
 		1EF7CFCE29D1DD9A0082F8AC /* RequestTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7CFCD29D1DD9A0082F8AC /* RequestTool.swift */; };
 		1EFC87CC29EEF10F004BD4E8 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC87CB29EEF10F004BD4E8 /* UIView+Extension.swift */; };
@@ -84,6 +85,7 @@
 		1E83D2B729D1385C00167150 /* DefaultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultService.swift; sourceTree = "<group>"; };
 		1E83D2B929D138E600167150 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1E83D2BB29D13B4400167150 /* ParamUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamUtil.swift; sourceTree = "<group>"; };
+		1E86A9ED29F57FFF007FB9F7 /* CASelectPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CASelectPhotoController.swift; sourceTree = "<group>"; };
 		1E9291A129CB42C60091E0F9 /* CATabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATabbarController.swift; sourceTree = "<group>"; };
 		1EF7CFCD29D1DD9A0082F8AC /* RequestTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTool.swift; sourceTree = "<group>"; };
 		1EFC87CB29EEF10F004BD4E8 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 		1E58440629E85B5F004BA104 /* SubModule */ = {
 			isa = PBXGroup;
 			children = (
+				1E86A9EC29F57FDB007FB9F7 /* SelectPhoto */,
 				1EFC87CD29F04E33004BD4E8 /* ObjectArray */,
 				1E58440729E85B72004BA104 /* TruncationLabel */,
 			);
@@ -284,6 +287,14 @@
 				1EF7CFCD29D1DD9A0082F8AC /* RequestTool.swift */,
 			);
 			path = NetworkTool;
+			sourceTree = "<group>";
+		};
+		1E86A9EC29F57FDB007FB9F7 /* SelectPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				1E86A9ED29F57FFF007FB9F7 /* CASelectPhotoController.swift */,
+			);
+			path = SelectPhoto;
 			sourceTree = "<group>";
 		};
 		1E9291A029CB42730091E0F9 /* NavAndTabbar */ = {
@@ -497,6 +508,7 @@
 			files = (
 				1EFC87CC29EEF10F004BD4E8 /* UIView+Extension.swift in Sources */,
 				1E316FC729D96EA800E1994F /* CAPopuopCustomView.swift in Sources */,
+				1E86A9EE29F57FFF007FB9F7 /* CASelectPhotoController.swift in Sources */,
 				1E316FC129D7EF5900E1994F /* UILabel+Extension.swift in Sources */,
 				1E60CCFF29DF326600DC0E6F /* CATruncationLabel.swift in Sources */,
 				1E4F831B29D3208C00D7C713 /* CAPopoupView.swift in Sources */,

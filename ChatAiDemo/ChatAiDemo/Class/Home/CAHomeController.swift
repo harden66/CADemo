@@ -34,51 +34,13 @@ class CAHomeController: CABaseViewController, UITableViewDelegate, UITableViewDa
         self.navigationItem.title = "Home"
         
         dataSource = [["JCTruncationLabelController": "TableView中cell加载展开收起的Label"],
-                      ["JCArrayOperationController": "对象数组操作"]]
+                      ["JCArrayOperationController": "对象数组操作"],
+                      ["CASelectPhotoController": "选择系统图片"]]
         
         view.addSubview(tableView)
         tableView.snp.makeConstraints { make in
             make.top.leading.bottom.trailing.equalToSuperview()
         }
-        
-        
-        
-        
-        
-        let queue = DispatchQueue(label: "com.chaoone.td", qos: .utility, attributes: .concurrent)
-        queue.async {
-            while (self.signle) {
-                print("dddddddd \(Thread.current)")
-                DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
-                    
-                    let provider = MoyaProvider<DefaultService>()
-                    provider.request(.sheets(size: 10)) { result in
-                        print(result)
-                        self.semaphore.signal()
-                        switch result {
-                        case let .success(Response):
-                            let data = Response.data
-                            let code = Response.statusCode
-                            let dataString = String(data: data, encoding: .utf8)
-                            print("request result\n stateCode:\(code),\n data:\(String(describing: dataString))")
-                        case let .failure(Error):
-                            print("request result\n stateCode:\(Error)")
-                        }
-                        print("dduu \(Thread.current)")
-                        if (self.signle) {
-                            
-                            self.tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .none)
-                        }
-                    }
-                }
-                self.semaphore.wait()
-
-            }
-        }
-        
-        
-        
-        
     }
     
     // MARK: TableView的代理
